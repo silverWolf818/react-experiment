@@ -1,10 +1,18 @@
-import {Page} from "../components/Layout/Page";
-import HomeLayout from "./HomeLayout";
+import {Page} from '../components/Layout/Page'
+import HomeLayout from './HomeLayout'
+import Template from '../components/Layout/Template'
+import List from '../List'
+import Container from '../Container'
 
-const Layout = () =>  {
+const Layout = () => {
     return (
         <Page layout={HomeLayout}>
-            <div>11111</div>
+            <Template slot='list'>
+                <List />
+            </Template>
+            <Template slot='box'>
+                <Container />
+            </Template>
         </Page>
     )
 }
